@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Navigation Bar</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        .main-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .menu-item, .sub-menu-item {
+            position: relative;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .sub-dropdown{
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            min-width: 200px;
+            display: none;
+            background-color: #444;
+        }
+        .menu-item a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .menu-item:hover, 
+        .sub-menu-item:hover {
+            background-color: #575757;
+        }
+
+        .drop-down {
+            display: none;
+            min-width: 200px;
+            background-color: #444;
+            position: absolute;
+            top: 100%;
+            left: 0%;
+            z-index: 1;
+        }
+
+        .menu-item:hover .drop-down {
+            display: block;
+
+        }
+
+        .sub-menu-item:hover .sub-dropdown{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul class="main-menu">
+            <li class="menu-item">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+                    Home</a>
+            </li>
+            <li class="menu-item">
+                Categories
+                <i class="fas fa-chevron-down"></i>
+                <ul class="drop-down">
+                    <li class="sub-menu-item">Men
+                        <i class="fas fa-chevron-right"></i>
+                        <ul class="sub-dropdown">
+                            <li class="sub-menu-item">Clothing</li>
+                            <li class="sub-menu-item">Accessories</li>
+                            <li class="sub-menu-item">Footware</li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">Women
+                        <i class="fas fa-chevron-right"></i>
+                        <ul class="sub-dropdown">
+                            <li class="sub-menu-item">Clothes</li>
+                            <li class="sub-menu-item">Accessories</li>
+                            <li class="sub-menu-item">Footware</li>
+                            <li class="sub-menu-item">Jewellery</li>
+                        </ul>
+
+                    </li>
+                    <li class="sub-menu-item">Kids
+                        <i class="fas fa-chevron-right"></i>
+                        <ul class="sub-dropdown">
+                            <li class="sub-menu-item">Clothing</li>
+                            <li class="sub-menu-item">Accessories</li>
+                            <li class="sub-menu-item">Footware</li>
+                            <li class="sub-menu-item">Toys</li>
+                            <li class="sub-menu-item">Story Books</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
